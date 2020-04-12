@@ -1,13 +1,346 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+hr {
+    width: 100%;
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.text {
+
+}
+
+.text_size_x {
+    font-size: 35px;
+}
+
+.app {
+    min-height: 100vh;
+    background: url("/img/background.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.page-content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 30px;
+    flex-grow: 1;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-card__phone {
+    margin: 0 0 3px 0;
+    color: #fff;
+}
+
+.btn {
+    padding: .2em 1em;
+    background: #231F1F;
+    color: #fff;
+    border-radius: 35px;
+    border: none;
+    font-weight: 200;
+    text-decoration: none;
+    display: block;
+    min-width: 60px;
+    text-align: center;
+}
+
+.btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:focus {
+    outline: none;
+    border: none;
+}
+
+.btn_theme_light {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn_theme_light:hover {
+    color: #000;
+}
+
+.btn_size_x {
+    font-size: 24px;
+    margin: .5em;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+}
+
+.logo__text {
+    width: 350px;
+    margin: 0 20px; 
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: -0.06em;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container_size_m {
+    max-width: 1200px;
+}
+
+.service-comparison {
+    display: flex;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.service-comparison__col {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3%;
+}
+
+.service-comparison__col:first-child::before {
+    content: "";
+    margin-top: inherit;
+    position: absolute;
+    height: 90%;
+    width: 1px;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+
+}
+
+.service-comparison__title {
+    padding: 3px 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-bottom: 1px solid #fff;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+}
+
+.service-comparison__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-comparison__content p {
+    margin-bottom: 20px;
+    display: flex;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.service-comparison_size_s .service-comparison__title, .service-comparison_size_s p, .service-comparison_size_s ul{
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.list {
+    margin: 10px 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.list_position_center {
+    align-items: center;
+}
+
+.list__item {
+    list-style-type: none;
+    border-bottom: 5px;
+}
+
+.list__item::before {
+    content: "\002D\ ";
+}
+
+.list_style_marked {
+    counter-reset: num;
+}
+
+.list_style_marked .list__item::before {
+    content: counter(num) '. '; 
+	counter-increment: num;
+}
+
+.product-card {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-card__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card__list {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #fff; 
+}
+
+.product-card__footer {
+    margin-top: 30px;
+}
+
+.full-card {
+    display: flex;
+}
+
+.full-card__prev {
+    padding: 0 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.full-card__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+.full-card__list {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #fff; 
+}
+
+.form {
+
+}
+
+.form__field {
+    margin: 0 0 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__sign {
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.06em;
+    margin-bottom: 10px;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 240px;
+    background: #FFFFFF;
+    border-radius: 35px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.form__textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 35px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.form__input:focus {
+    outline: none;
+    border: none;
+}
+
+.form__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__col {
+    width: 50%;
+    padding: 20px;
 }

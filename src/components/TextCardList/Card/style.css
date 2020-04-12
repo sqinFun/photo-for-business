@@ -1,0 +1,30 @@
+.text-card-list__card {
+    max-width: 370px;
+    padding: 30px;
+    width: 100%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.text-card-list__title {
+    margin: 0;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+.text-card-list__text {
+    margin: 15px 0 0;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 23px;
+    line-height: 28px;
+    text-align: center;
+}
