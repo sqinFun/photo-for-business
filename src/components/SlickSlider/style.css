@@ -1,0 +1,29 @@
+.slider {
+    width: 100%;
+}
+
+.slider__slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.slider .slick-next:before,
+.slider .slick-prev:before {
+    color: #4a4949 ;
+}
+
+.slider .slick-next {
+    right: 0;
+    z-index: 1;
+}
+
+.slider .slick-prev {
+    left: 0;
+    z-index: 1;
+}

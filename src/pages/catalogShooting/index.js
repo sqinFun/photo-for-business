@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import Article from '../../components/Article/Article';
 
+import { Link } from 'react-router-dom';
+
 
 function CatalogShootingPage() {
 
@@ -12,7 +14,7 @@ function CatalogShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Фотосъёмка на моделях</button>
-              <img src="/img/stub.png" alt=""/>
+              <img src="/img/stub.png" alt="" />
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">
@@ -27,7 +29,7 @@ function CatalogShootingPage() {
               </div>
             </div>
             <div className="product-card__footer">
-              <button className="btn btn_theme_light btn_size_x">Рассчитать стоимость</button>
+              <Link to="/calculation" className="btn btn_theme_light btn_size_x">Рассчитать стоимость</Link>
             </div>
           </div>
         </div>
@@ -35,7 +37,7 @@ function CatalogShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Премиум</button>
-              <img src="/img/stub.png" alt=""/>
+              <img src="/img/stub.png" alt="" />
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">
@@ -50,7 +52,7 @@ function CatalogShootingPage() {
               </div>
             </div>
             <div className="product-card__footer">
-              <button className="btn btn_theme_light btn_size_x">Рассчитать стоимость</button>
+              <Link to="/calculation" className="btn btn_theme_light btn_size_x">Рассчитать стоимость</Link>
             </div>
           </div>
         </div>

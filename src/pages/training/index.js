@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Article from '../../components/Article/Article';
+import SlickSlider from '../../components/SlickSlider/SlickSlider';
 
 
 function TraningPage() {
@@ -9,11 +11,11 @@ function TraningPage() {
     <Article title="Курс предметной фотосъёмки">
       <div className="full-card">
         <div className="full-card__prev">
-          <img src="/img/stub.png" alt=""/>
-          <button className="btn btn_theme_light btn_size_x">Записаться</button>
+          <SlickSlider sliderName="training"></SlickSlider>
+          <Link to="/courses" className="btn btn_theme_light btn_size_x">Записаться</Link>
         </div>
         <div className="full-card__content">
-          <p class="m-0">В курсе предметной фотографии вы научитесь и будете знать:</p>
+          <p className="m-0">В курсе предметной фотографии вы научитесь и будете знать:</p>
           <ul className="list list_style_marked full-card__list">
             <li className="list__item">
               Как с ограниченным бюджетом организовать фотостудию для работы.
