@@ -4,6 +4,49 @@ import Article from '../../components/Article/Article';
 
 import { Link } from 'react-router-dom';
 
+import SlickSlider from '../../components/SlickSlider/SlickSlider';
+
+let imagesPremium = [
+  {
+    id: 1,
+    src: "/img/slider/catalogShooting/premium/1.jpg",
+  },
+  {
+    id: 2,
+    src: "/img/slider/catalogShooting/premium/2.jpg",
+  },
+  {
+    id: 3,
+    src: "/img/slider/catalogShooting/premium/3.jpg",
+  },
+  {
+    id: 4,
+    src: "/img/slider/catalogShooting/premium/4.jpg",
+  },
+  {
+    id: 5,
+    src: "/img/slider/catalogShooting/premium/5.jpg",
+  },
+]
+
+let imagesModel = [
+  {
+    id: 1,
+    src: "/img/slider/catalogShooting/model/1.jpg",
+  },
+  {
+    id: 2,
+    src: "/img/slider/catalogShooting/model/2.jpg",
+  },
+  {
+    id: 3,
+    src: "/img/slider/catalogShooting/model/3.jpg",
+  },
+  {
+    id: 4,
+    src: "/img/slider/catalogShooting/model/4.jpg",
+  },
+]
 
 function CatalogShootingPage() {
 
@@ -14,7 +57,7 @@ function CatalogShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Фотосъёмка на моделях</button>
-              <img src="/img/stub.png" alt="" />
+              <SlickSlider imgList={imagesModel}></SlickSlider>
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">
@@ -29,7 +72,7 @@ function CatalogShootingPage() {
               </div>
             </div>
             <div className="product-card__footer">
-              <Link to="/calculation" className="btn btn_theme_light btn_size_x">Рассчитать стоимость</Link>
+              <Link to="/calculation" className="btn btn_theme_light btn_size_x" title="Каталожная съёмка | Фотосъёмка на моделях">Рассчитать стоимость</Link>
             </div>
           </div>
         </div>
@@ -37,7 +80,7 @@ function CatalogShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Премиум</button>
-              <img src="/img/stub.png" alt="" />
+              <SlickSlider imgList={imagesPremium}></SlickSlider>
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">
@@ -52,7 +95,7 @@ function CatalogShootingPage() {
               </div>
             </div>
             <div className="product-card__footer">
-              <Link to="/calculation" className="btn btn_theme_light btn_size_x">Рассчитать стоимость</Link>
+              <Link to="/calculation" className="btn btn_theme_light btn_size_x" title="Каталожная съёмка | Премиум">Рассчитать стоимость</Link>
             </div>
           </div>
         </div>

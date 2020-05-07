@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import Article from '../../components/Article/Article';
 
-function Courses() {
+function Courses(props) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
 
   function sendForm(e) {
     let data = {
+      title: props.title,
       name: name,
       phone: phone,
       email: email,

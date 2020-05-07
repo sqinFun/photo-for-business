@@ -4,6 +4,20 @@ import { Link } from 'react-router-dom';
 import Article from '../../components/Article/Article';
 import SlickSlider from '../../components/SlickSlider/SlickSlider';
 
+let images = [
+  {
+    id: 1,
+    src: "/img/slider/training/1.jpg",
+  },
+  {
+    id: 2,
+    src: "/img/slider/training/2.jpg",
+  },
+  {
+    id: 3,
+    src: "/img/slider/training/3.png",
+  },
+]
 
 function TraningPage() {
 
@@ -11,8 +25,8 @@ function TraningPage() {
     <Article title="Курс предметной фотосъёмки">
       <div className="full-card">
         <div className="full-card__prev">
-          <SlickSlider sliderName="training"></SlickSlider>
-          <Link to="/courses" className="btn btn_theme_light btn_size_x">Записаться</Link>
+          <SlickSlider imgList={images}></SlickSlider>
+          <Link to="/courses" className="btn btn_theme_light btn_size_x" title="Курс предметной фотосъёмки">Записаться</Link>
         </div>
         <div className="full-card__content">
           <p className="m-0">В курсе предметной фотографии вы научитесь и будете знать:</p>

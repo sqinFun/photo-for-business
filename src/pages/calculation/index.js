@@ -3,16 +3,25 @@ import React, { useState, useEffect } from 'react';
 import Article from '../../components/Article/Article';
 
 
-function CalculationPage() {
+function CalculationPage(props) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const [details, setDetails] = useState('');
+  console.log(props.title);
 
   function sendForm(e) {
+    let data = {
+      title: props.title,
+      name: name,
+      phone: phone,
+      email: email,
+      details: details
+    }
     e.preventDefault();
     fetch('/courses', {
       method: 'POST',
-      body: JSON.stringify(),
+      body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -46,7 +55,7 @@ function CalculationPage() {
           <div className="form__col">
             <label className="form__field">
               <span className="form__sign">Опишите детали съемки</span>
-              <textarea className="form__textarea" name="" id="" cols="30" rows="10"></textarea>
+              <textarea className="form__textarea" name="" id="" cols="30" rows="10" onChange={(e) => setDetails(e.target.value)}></textarea>
             </label>
             <div className="item-list item-list_position_center ">
               <button type="submit" className="btn btn_theme_light mt-4">Отправить</button>

@@ -3,7 +3,6 @@ import './style.css';
 import Card from './Card/Card';
 
 function TextCardList(props) {
-  console.log(props);
   return (
     <div className="text-card-list">
       {props.cards.map( card => 
