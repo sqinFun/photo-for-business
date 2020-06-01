@@ -25,7 +25,7 @@ function TraningPage() {
     <Article title="Курс предметной фотосъёмки">
       <div className="full-card">
         <div className="full-card__prev">
-          <SlickSlider imgList={images}></SlickSlider>
+          <SlickSlider sliderId="3"></SlickSlider>
           <Link to="/courses" className="btn btn_theme_light btn_size_x" title="Курс предметной фотосъёмки">Записаться</Link>
         </div>
         <div className="full-card__content">

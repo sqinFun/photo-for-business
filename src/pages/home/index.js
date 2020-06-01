@@ -5,8 +5,7 @@ import TextCardList from '../../components/TextCardList/TextCardList';
 
 
 function HomePage() {
-
-
+  
   const [cards, setCards] = useState([
     {
       id: 0,

@@ -22,7 +22,7 @@ function Article(props) {
     }
 
     return (
-        <div className={"article " + classList}>
+        <div className={"article " + classList + " " + props.className}>
             {props.title && <h1 className="article__title">{props.title}</h1>}
             <div className="article__content">{props.children}</div>
         </div>

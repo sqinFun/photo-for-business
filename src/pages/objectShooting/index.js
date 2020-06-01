@@ -61,7 +61,7 @@ function ObjectShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Стандарт</button>
-              <SlickSlider imgList={imagesStandatr}></SlickSlider>
+              <SlickSlider sliderId='1' />
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">
@@ -93,7 +93,7 @@ function ObjectShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Премиум</button>
-              <SlickSlider imgList={imagesPremium}></SlickSlider>
+              <SlickSlider sliderId='2'></SlickSlider>
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">

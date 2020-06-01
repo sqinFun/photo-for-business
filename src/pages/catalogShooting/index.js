@@ -57,7 +57,7 @@ function CatalogShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Фотосъёмка на моделях</button>
-              <SlickSlider imgList={imagesModel}></SlickSlider>
+              <SlickSlider sliderId="4"></SlickSlider>
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">
@@ -80,7 +80,7 @@ function CatalogShootingPage() {
           <div className="product-card">
             <div className="product-card__content">
               <button className="btn btn_theme_light btn_size_x">Премиум</button>
-              <SlickSlider imgList={imagesPremium}></SlickSlider>
+              <SlickSlider sliderId="5"></SlickSlider>
               <h2 className="service-comparison__title">Условия</h2>
               <div className="service-comparison__content">
                 <ul className="list list_position_center product-card__list">

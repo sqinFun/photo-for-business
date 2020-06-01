@@ -18,6 +18,10 @@
 }
 
 .article_size_x {
+    max-width: 1200px;
+}
+
+.article_size_xl {
     max-width: none;
 }
 
